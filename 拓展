@@ -1,0 +1,34 @@
+import Cast from '../utils/cast.js'
+
+class Kts_Python_expand {
+  constructor(runtime) {
+    this._formatMessage = runtime.getFormatMessage({
+      "zh-cn": {
+        "Kts_Python_expand.name": "关于Pythonの拓展",
+        "Kts_Python_expand.int": "将[number]向下取整",
+        "Kts_Python_expand.eval":"将[number]转为纯数字",
+        "Kts_Python_expand.notEqual":"[number1]≠[number2]?",
+        "Kts_Python_expand.greaterThanOrEqualTo":"[number1]≥[number2]?",
+        "Kts_Python_expand.lessThanOrEqualTo":"[number1]≤[number2]?",
+      },
+      
+      en: {
+        "Kts_Python_expand.name": "About Pythonのextension",
+        "Kts_Python_expand.int": "Round down [number]",
+        "Kts_Python_expand.eval":"Convert [number] to a pure number",
+        "Kts_Python_expand.notEqual":"[number1]≠[number2]?",
+        "Kts_Python_expand.greaterThanOrEqualTo":"[number1]≥[number2]?",
+        "Kts_Python_expand.lessThanOrEqualTo":"[number1]≤[number2]?",
+      }
+     })
+    
+  }
+  
+  formatMessage(id) {
+    return this._formatMessage({
+      id,
+      default: id,
+      description: id
+    });
+  }
+
